@@ -220,7 +220,7 @@ class circuit_optimization():
                     for gate in gate_list:
                         if gate[0].name == 'barrier':
                             if len(gate[1])==1:
-                                if (gate[1][x].register == delete_register) & (gate[1][x].index == delete_index):
+                                if (gate[1][0].register == delete_register) & (gate[1][0].index == delete_index):
                                         gate_list.pop(gate_list.index(gate))
                             if len(gate[1])>1:
                                 b_qubit_list=[]
