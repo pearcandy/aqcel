@@ -146,13 +146,15 @@ class recognition():
             if level == 2:
                 for edge in dag.edges(node):
                     child = edge[1]
-                    qbit = edge[2]['wire']
+                    #qbit = edge[2]['wire']
+                    qbit = edge[2] 
                     if child in node_list:
                         G.add_edge(node, child, edge_attr=(str(qbit.index)))
             elif level == 3:
                 for edge in dag.edges(node):
                     child = edge[1]
-                    qbit = edge[2]['wire']
+                    #qbit = edge[2]['wire']                    
+                    qbit = edge[2] 
                     if child in node_list:
                         if node.name[0] != 'c' or node.qargs[-1] == qbit:
                             G.add_edge(node, child, edge_attr=('target'))

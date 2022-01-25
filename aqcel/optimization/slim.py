@@ -1,5 +1,5 @@
 import numpy as np
-from aqcel.optimization import RIIM_tools
+#from aqcel.optimization import RIIM_tools
 from qiskit import *
 from qiskit.converters import circuit_to_dag, dag_to_circuit
 from qiskit.dagcircuit import DAGCircuit
